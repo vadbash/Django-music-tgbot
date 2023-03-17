@@ -1,47 +1,7 @@
-# django-telegram-bot
-Матеріал уроку №17 | Телеграм бот + панель адміністратора на Django
+# Readme
 
-## Інформація по налаштуванню та запуску проекта
+The structure of this code is written in **Django** and Telegram bot. Its main purpose is to **extract music from YouTube videos in mp3 and mp4 format**.
 
-Всі команди для Linux
+All libraries are in the file  `requirements.txt`.
 
-```bash
-# Створення віртуального середовища python
-
-python3 -m venv venv
-
-# Активація віртуального середовища
-
-source venv/bin/activate
-
-# Встановлення бібліотек з файлу requirements
-
-pip install -r requirements.txt
-
-# Перехід в папку проекта
-
-cd telegram/
-
-# Міграції, запуск Django
-
-python3 manage.py makemigrations
-python3 manage.py migrate
-
-# Створення суперкористувача
-
-python3 manage.py createsuperuser
-
-# Запуск Django
-
-python3 manage.py runserver
-
-```
-
-## Токен бота
-
-Токен бота треба прописати в файл telegram/bot/bot.py
-
-```python
-bot = telebot.TeleBot('Your-Bot-Token')
-```
- 
+To download, write in the command line  `pip install -r requirements.txt`
