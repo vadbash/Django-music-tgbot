@@ -8,12 +8,12 @@ import os, re
 import youtube_dl
 from PIL import Image
 
-bot = telebot.TeleBot('Your-token')
+bot = telebot.TeleBot('6358494844:AAEw-RIEb49cJuX3U1BP2qBSbrFeN3tJnhU')
 
 @bot.message_handler(commands=['start', 'help'])
 def send_welcome(message):
     
-    bot.send_message(message.chat.id, text="Hello")
+    bot.send_message(message.chat.id, text="Hello, send the link on video you want to download music from")
     add_user(chat_id=message.chat.id, 
              full_name=str(message.from_user.first_name) + " " + str(message.from_user.last_name), 
              username=str(message.from_user.username), 
@@ -59,9 +59,9 @@ def func(message):
             except: os.remove(name+'.webp')
             os.remove(name+'.mp3')
         except:
-            bot.send_message(message.chat.id, 'Помилка')
+            bot.send_message(message.chat.id, 'Error')
     else:
-        bot.send_message(message.chat.id, 'Помилка, не вірне посилання')
+        bot.send_message(message.chat.id, 'Error, invalid link')
 
     message_history(message_id = message.message_id, 
                     chat_id = message.from_user.id, 
