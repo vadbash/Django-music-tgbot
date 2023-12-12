@@ -8,7 +8,7 @@ import os, re
 import youtube_dl
 from PIL import Image
 
-bot = telebot.TeleBot('6358494844:AAEw-RIEb49cJuX3U1BP2qBSbrFeN3tJnhU')
+bot = telebot.TeleBot('Your_bot_token')
 
 @bot.message_handler(commands=['start', 'help'])
 def send_welcome(message):
