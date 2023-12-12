@@ -1,10 +1,10 @@
-from .models import ChatbotUsers, MessageHistory
+from .models import ChatBotUser, MessageHistory
 from rest_framework import serializers
 
 
 class UserSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
-        model = ChatbotUsers
+        model = ChatBotUser
         fields = ('chat_id', 'full_name', 'username', 'language_code', 'reg_date')
 
 
